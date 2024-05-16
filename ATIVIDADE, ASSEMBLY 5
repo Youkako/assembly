@@ -1,0 +1,40 @@
+.data 
+	msg1:.asciiz"qual foi o valor da compra? "
+	msg2:.asciiz"\nqual foi o valor entregue? "
+	msg3:.asciiz"\nseu troco é "
+.text 
+
+	li $v0, 4
+	la $a0, msg1
+	syscall
+	
+	li $v0, 6 
+	syscall
+	
+	mov.s $f2, $f0
+	
+	li $v0, 4
+	la $a0, msg2
+	syscall
+	
+	li $v0, 6 
+	syscall
+	
+	mov.s $f4, $f0
+	sub.s $f12, $f4, $f2
+	
+	li $v0, 4
+	la $a0, msg3
+	syscall
+	
+	li $v0, 2
+	syscall
+	
+	li $v0, 10
+	syscall 
+	
+	
+	
+	
+	
+	
