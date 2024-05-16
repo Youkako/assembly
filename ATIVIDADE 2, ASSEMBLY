@@ -1,7 +1,7 @@
 .data 
-  msg1:. asciiz"forneça o primeiro numero decimal\n"
-  msg2:. asciiz"forneça o segundo numero decimal\n"
-  msg3:. asciiz"a soma dos numeros é"
+  msg1:.asciiz"forneça o primeiro numero decimal\n"
+  msg2:.asciiz"forneça o segundo numero decimal\n"
+  msg3:.asciiz"a soma dos numeros é"
 .text
   li $v0, 4 
   la $a0, msg1
