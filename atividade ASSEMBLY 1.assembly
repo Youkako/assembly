@@ -1,0 +1,47 @@
+.data
+	nome:.asciiz "AÇOUGUE HOMER SIMPSOM\n"
+	msg:.asciiz"Bom dia! os tipo de cortes de carne que temos são\n"
+	msg1:.asciiz"\nCarne Moida, valor é "
+	msg2:.asciiz"\nCoxão Mole, valor é "
+	msg3:.asciiz"\nPicanha, valor é "
+	msg4:.asciiz"\nFraldinha, valor é "
+	CarneMoida:.float 22.90
+	CoxãoMole:.float 33.80
+	Picanha:.float 62.40
+	Fraldinha:.float 45.50
+.text
+	li $v0, 4
+	la $a0, nome
+	syscall
+	
+	li $v0, 4
+	la $a0, msg
+	syscall
+	
+	li $v0, 4
+	la $a0, msg1
+	syscall
+	li $v0, 2
+	lwc1 $f12, CarneMoida
+	syscall
+	
+	li $v0, 4
+	la $a0, msg2
+	syscall
+	li $v0, 2
+	lwc1 $f12, CoxãoMole
+	syscall
+	
+	li $v0, 4
+	la $a0, msg3
+	syscall
+	li $v0, 2
+	lwc1 $f12, Picanha
+	syscall
+	
+	li $v0, 4
+	la $a0, msg4
+	syscall
+	li $v0, 2
+	lwc1 $f12, Fraldinha
+	syscall
